@@ -1,0 +1,146 @@
+<%- include('../partials/header.ejs') %>
+
+<section class="container-fluid px-0 content" id="upper-container">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center d-sm-block mt-5" id="title">
+           <h2 class="card-title font-weight-bold">Nicholas Eveland</h2>
+           <hr class="style-one">
+           <h5 class="card-text font-weight-light text-center">Tax Accountant - Software Developer</h5>
+        </div>
+
+       <div class="col-md-6" id="portrait">
+           <img class="img-fluid" src="./images/2113 Nicholas Eveland.jpeg" alt="Nicholas Eveland">
+       </div>
+    </div>
+   </section>
+
+<div class="container">
+   
+<!--Page content-->
+    <div class="page-content">
+        <section id="resume">
+            <div class="education-container">
+                <!--Education-->
+                <span class="anchor" id="education"></span>
+                <h2 class="headingText">Education</h2>
+                <% if(loggedIn) { %>
+                    <form action="/resume/education/new" method="GET">
+                        <button class="btn btn-success">
+                            Add new education
+                        </button>
+                    </form>
+                <% }; %>
+
+                <div class="row">
+                    <% education.forEach(item => { %>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding-bottom:15px;">
+                                    <h5 class="card-title"><%= item.degree %></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><%= item.field %></h6>
+                                    <p class="card-text"><%= item.misc %></p>
+                                    <% if(loggedIn) { %>    
+                                            <form  action="/resume/education/<%= item._id %>/edit" method="GET">
+                                                <button class="btn btn-primary btn-block">
+                                                    Edit
+                                                </button>
+                                            </form>
+                                            <form class="form" action="/resume/education/<%= item._id %>?_method=DELETE" method="POST">
+                                                <button class="btn btn-danger btn-block">
+                                                    Delete
+                                                </button>
+                                            </form>
+                                    <% }; %>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+
+            <!--Experience-->
+            <div class="experience-container">
+                <span class="anchor" id="experience"></span>
+                <h2 class="headingText">Experience</h2>
+                <% if(loggedIn) { %>
+                    <form action="/resume/experience/new" method="GET">
+                        <button class="btn btn-success">
+                            Add new experience
+                        </button>
+                    </form>
+                <% }; %>
+                
+                <div class="row">
+                    <% jobs.forEach(item => { %>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding:15px;">
+                                    <h5 class="card-title"><%= item.title %></h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><%= item.company %></h6>
+                                    <p class="card-text location-and-date text-muted"><%= item.location %>; <%= item.duration %></p>
+                                    <p class="card-text"><%= item.description %></p>
+                                    <% if(loggedIn) { %>    
+                                        <form  action="/resume/experience/<%= item._id %>/edit" method="GET">
+                                            <button class="btn btn-primary btn-block">
+                                                Edit
+                                            </button>
+                                        </form>
+                                        <form class="form" action="/resume/experience/<%= item._id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-danger btn-block">
+                                                Delete
+                                            </button>
+                                        </form>
+                                <% }; %>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <!--Qualifications-->
+            <div class="qualifications-container">
+                <span class="anchor" id="qualifications"></span>
+                <h2 class="headingText">Qualifications</h2>
+                <% if(loggedIn) { %>
+                    <form action="/resume/qualifications/new" method="GET">
+                        <button class="btn btn-success">
+                            Add new qualification
+                        </button>
+                    </form>
+                <% }; %>
+                <div class="row">
+                    <% qualifications.forEach(item => { %>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= item.title %></h5>
+                                <ul class="list-group list-group-flush">
+                                <% item.points.forEach(point => { %>
+                                    <li class="list-group-item" id="qualification"><%= point.point %></li>
+                                <% }); %>
+                                </ul>
+                                <% if(loggedIn) { %>    
+                                    <form  action="/resume/qualifications/<%= item._id %>/edit" method="GET">
+                                        <button class="btn btn-primary btn-block">
+                                            Edit
+                                        </button>
+                                    </form>
+                                    <form class="form" action="/resume/qualifications/<%= item._id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-danger btn-block">
+                                            Delete
+                                        </button>
+                                    </form>
+                            <% }; %>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>    
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+
+<%- include('../partials/footer.ejs') %>

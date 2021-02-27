@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <h1>Register as Administrator</h1>
+
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,176 @@
+body {
+    font-family: 'Montserrat';
+    width: 100%;
+    overflow: hidden;
+         overflow-y: auto;
+  }
+
+  a {
+     text-decoration: none;
+  }
+ 
+ .navbar-brand { 
+    color: #005c99;
+    font-size: x-large;
+ }
+ 
+ .navbar-toggler:focus,
+ .navbar-toggler:active,
+ .navbar-toggler-icon:focus {
+     outline: none;
+     box-shadow: none;
+ }
+ 
+ #upper-container {
+    max-width: 97.9%;
+ }
+ 
+ #title {
+    padding-left: 0;
+    padding-right: 0;
+ }
+ 
+ #portrait {
+    padding-left: 0;
+    padding-right: 0;
+ }
+ 
+ /** Links in header **/
+ 
+ .anchor{
+    display: block;
+    height: 60px; /*same height as header*/
+    margin-top: -60px; /*same height as header*/
+    visibility: hidden;
+  }
+ 
+ h2 {
+    font-family: 'Montserrat';
+    padding-bottom: 5px;
+    text-align: center;
+    color: #005c99;
+ }
+ 
+ h5 {
+    color: #7697f8;
+    font-weight: 100;
+ }
+ 
+ /** cards **/
+ 
+ .card {
+    margin: 1rem auto;
+    text-align: center;
+    transition: all 200ms;
+ }
+
+ #qualification {
+    text-align: left;
+ }
+ 
+ .card-img-top {
+    margin: 0 auto;
+    max-width: 65%;
+ }
+ 
+ .location-and-date {
+    font-style: oblique;
+ }
+ 
+ .card-title {
+    font-weight: 500;
+ }
+ 
+  .headingText {
+     padding-top: 2rem;
+  }
+ 
+ hr.style-one {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0));
+ }
+ 
+ /** Footer **/
+
+
+ .content-wrap {
+   padding-bottom: 6.2rem; /* height of footer */
+   position: relative;
+    min-height: 100vh;
+}
+
+ footer {
+   z-index: 10;
+   position: absolute;
+   display: block;
+   bottom: 0;
+   width: 100%;
+   height: 7rem; 
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 5px;
+}
+
+.social-link {
+   color: #b6cffa;
+   font-size: 2rem;
+   margin: 1rem;
+}
+
+.social-link:hover {
+   color: #005c99;
+}
+
+#copyright {
+   display: block;
+   width: 100%;
+   margin: 1rem 0 1rem 0;
+   padding-bottom: 1rem;
+}
+ 
+ /** Project Portfolio **/
+ 
+  .portfolio-card {
+     padding-top: 0;
+     padding-left: 0;
+     padding-right: 0;
+     font-weight: bolder;
+  }
+ 
+  .hover-effect-card {
+    transform: scale(1.04);
+  }
+
+ .portolio-desc {
+     color: rgba(0,0,0,.5);
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

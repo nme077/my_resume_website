@@ -1,0 +1,44 @@
+<%- include('../../partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+
+            <h1>Add New Experience</h1>
+
+            <form action="/resume/experience" method="POST">
+                <div class="form-group">
+                    <label for="image-input">Image</label>
+                    <input type="text" class="form-control" id="image-input" name="job[image]" placeholder="File path">
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="job[title]" placeholder="Job title">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" name="job[company]" placeholder="Company">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" id="location" name="job[location]" placeholder="City and State">
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration of Employment</label>
+                    <input type="text" class="form-control" id="duration" name="job[duration]" placeholder="Date range">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="job[description]" placeholder="Description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>  
+    </div>
+</div>
+
+
+
+
+
+<%- include('../../partials/footer.ejs') %>

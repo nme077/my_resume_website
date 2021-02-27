@@ -1,0 +1,25 @@
+<%- include('../../partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <h1>Add New Qualification</h1>
+
+            <form action="/resume/qualifications" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="title" name="qualification[title]" placeholder="Title">
+                </div>
+                <ul id="qual-list" style="list-style: none; padding-left: 0;">
+    
+                </ul>
+                <div class="btn btn-primary" id="add-qual">+</div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include('../../partials/footer.ejs') %>

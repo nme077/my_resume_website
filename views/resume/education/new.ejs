@@ -1,0 +1,34 @@
+<%- include('../../partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <h1>Add New Education</h1>
+
+            <form action="/resume/education" method="POST">
+                <div class="form-group">
+                    <label for="image-input">Image</label>
+                    <input type="text" class="form-control" id="image-input" name="education[image]" placeholder="File path">
+                </div>
+                <div class="form-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" class="form-control" id="degree" name="education[degree]" placeholder="Degree">
+                </div>
+                <div class="form-group">
+                    <label for="field">Field</label>
+                    <input type="text" class="form-control" id="field" name="education[field]" placeholder="Field of study">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea type="text" class="form-control" id="description" name="education[description]" placeholder="Description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include('../../partials/footer.ejs') %>
