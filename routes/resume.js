@@ -3,6 +3,7 @@ const express = require('express'),
       middleware = require('../middleware'),
       Education = require('../models/education'),
       Job = require('../models/jobs'),
+      fs = require('file-system'),
       Qualification = require('../models/qualifications');
 
 
@@ -215,6 +216,18 @@ router.delete('/qualifications/:id', middleware.loggedIn, (req, res) => {
             res.redirect('/resume');
         }
     })
+});
+
+
+// Download pdf
+router.get('/download', function(req, res){
+  const resumePdf = "./public/pdfs/resume.pdf";
+  
+  fs.readFile(resumePdf, function (err,data){
+     res.contentType("application/pdf");
+     res.setHeader('Content-Disposition', 'attachment; filename=nicholas-eveland.pdf');
+     res.send(data);
+  });
 });
 
 function createList(points) {
