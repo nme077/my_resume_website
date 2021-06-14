@@ -8,6 +8,10 @@ body {
   a {
      text-decoration: none;
   }
+
+.navbar {
+   background-color: #cce5ff !important;
+}
  
  .navbar-brand { 
     color: #005c99;
@@ -56,18 +60,27 @@ body {
  
  /** Links in header **/
  
- .anchor{
-    display: block;
-    height: 60px; /*same height as header*/
-    margin-top: -60px; /*same height as header*/
-    visibility: hidden;
-  }
+.anchor{
+   display: block;
+   height: 60px; /*same height as header*/
+   margin-top: -60px; /*same height as header*/
+   visibility: hidden;
+}
+
+.navbar-brand {
+   font-weight: 550;
+}
+
+.nav-link {
+   font-weight: 550;
+}
  
  h2 {
     font-family: 'Montserrat';
     padding-bottom: 5px;
     text-align: center;
     color: #005c99;
+    font-weight: 500;
  }
  
  h5 {
@@ -99,10 +112,12 @@ body {
  .card-title {
     font-weight: 500;
  }
+
  
-  .headingText {
-     padding-top: 2rem;
-  }
+.headingText {
+   padding-top: 2rem;
+   font-size: 3em;
+}
  
  hr.style-one {
     border: 0;

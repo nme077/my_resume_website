@@ -179,13 +179,13 @@
     <div class="row">
         <% jobs.forEach(item => { %>
             <div class="col-sm-12 col-md-6 my-2">
-                <div class="card border-0 bg-transparent">
+                <div class="card bg-transparent shadow-sm">
                     <div class="card-body">
                         <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding:15px;">
                         <h5 class="card-title"><%= item.title %></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><%= item.company %></h6>
                         <p class="card-text location-and-date text-muted"><%= item.location %>; <%= item.duration %></p>
-                        <p class="card-text"><%= item.description %></p>
+                        <p class="card-text text-left"><%= item.description %></p>
                         <% if(loggedIn) { %>    
                             <form  action="/resume/experience/<%= item._id %>/edit" method="GET">
                                 <button class="btn btn-primary btn-block">
