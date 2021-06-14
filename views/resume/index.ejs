@@ -1,150 +1,208 @@
 <%- include('../partials/header.ejs') %>
 
-<section class="d-flex align-items-center position-relative min-vh-100 overflow-hidden pt-6 pb-lg-5 about-container">
-<!--<section class="container-fluid px-0 content" id="upper-container">-->
-    <div class="row align-items-center">
+<div class="d-flex align-items-center position-relative overflow-hidden pt-6 pb-lg-5 about-container">
+    <div class="row align-items-center bg-white">
         <div class="col-md-5 text-center d-sm-block mt-5" id="title">
            <h2 class="card-title font-weight-bold">Nicholas Eveland</h2>
            <hr class="style-one">
-           <h5 class="card-text font-weight-light text-center">Tax Accountant - Software Developer</h5>
+           <h5 class="card-text font-weight-normal text-center">Full-Stack Javascript Developer - Tax Accountant</h5>
            <div class="my-4">
                <a href="/resume/download" class="btn btn-secondary" id="download-pdf-btn">Download Resum&eacute;</a>
            </div>
-        </div>
+           <a href="http://www.linkedin.com/in/nicholas-eveland-7988279a" class="social-link" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/nme077" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            </div>
 
        <div class="col-md-7" id="portrait">
            <img class="img-fluid" src="./images/2113 Nicholas Eveland.jpeg" alt="Nicholas Eveland">
        </div>
     </div>
-   </section>
+</div>
 
-<div class="container">
-   
-<!--Page content-->
-    <div class="page-content">
-        <section id="resume">
-            <div class="education-container">
-                <!--Education-->
-                <span class="anchor" id="education"></span>
-                <h2 class="headingText">Education</h2>
-                <% if(loggedIn) { %>
-                    <form action="/resume/education/new" method="GET">
-                        <button class="btn btn-success">
-                            Add new education
-                        </button>
-                    </form>
-                <% }; %>
 
-                <div class="row">
-                    <% education.forEach(item => { %>
-                        <div class="col-sm-12 col-md-6 my-2">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding-bottom:15px;">
-                                    <h5 class="card-title"><%= item.degree %></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><%= item.field %></h6>
-                                    <p class="card-text"><%= item.misc %></p>
-                                    <% if(loggedIn) { %>    
-                                            <form  action="/resume/education/<%= item._id %>/edit" method="GET">
-                                                <button class="btn btn-primary btn-block">
-                                                    Edit
-                                                </button>
-                                            </form>
-                                            <form class="form" action="/resume/education/<%= item._id %>?_method=DELETE" method="POST">
-                                                <button class="btn btn-danger btn-block">
-                                                    Delete
-                                                </button>
-                                            </form>
-                                    <% }; %>
-                                </div>
-                            </div>
-                        </div>
-                    <% }); %>
-                </div>
+<!--Qualifications-->
+<div class="colored-container">
+    <div class="container">
+        <span class="anchor" id="qualifications"></span>
+        <h2 class="headingText mb-4">Skills</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-3 my-2 text-center">
+                <h3 class="display-2 text-secondary"><i class="fab fa-js"></i></h2>
+                <h3>Javascript</h3>
+                <p>React, jQuery, Node.js</p>
             </div>
+            <div class="col-sm-12 col-md-3 my-2 text-center">
+                <h3 class="display-2 text-secondary"><i class="fas fa-paint-roller"></i></h2>
+                <h3>Front-End</h3>
+                <p>HTML, CSS, SCSS, Bootstrap</p>
+            </div>
+            <div class="col-sm-12 col-md-3 my-2 text-center">
+                <h3 class="display-2 text-secondary"><i class="fas fa-database"></i></h2>
+                <h3>Database</h3>
+                <p>MongoDB</p>
+            </div>
+            <div class="col-sm-12 col-md-3 my-2 text-center">
+                <h3 class="display-2 text-secondary"><i class="fas fa-cloud"></i></h2>
+                <h3>Cloud and Hosting</h3>
+                <p>Heroku, Cloudinary</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!--Experience-->
-            <div class="experience-container">
-                <span class="anchor" id="experience"></span>
-                <h2 class="headingText">Experience</h2>
-                <% if(loggedIn) { %>
-                    <form action="/resume/experience/new" method="GET">
-                        <button class="btn btn-success">
-                            Add new experience
-                        </button>
-                    </form>
-                <% }; %>
+<div class="other-container">
+    <div class="container">
+        <span class="anchor" id="projects"></span>
+        <h2 class="headingText mb-4">Projects</h2>
+        <div class="card-columns">
+            
+            <a href="https://cardapp77.herokuapp.com/" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img class="link-img" src="./images/Grayscale on Transparent.png" style="max-width: 100%; height: auto; padding: 15px">
+                <p class="card-title portolio-desc">Greeting card creator built on Node.js</p>
+            </a>
+            
+            <a href="https://famsocial.herokuapp.com/" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card" style="background-color: #046C8C;">
+                <div class="p-5 famSocial">FamSocial</div>
+                <p class="card-title portolio-desc text-white">The social network designed for your Fam!</p>
+            </a>
+
+            
+            <a href="https://codepen.io/nicholas-eveland/full/BaKJxQg" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img class="link-img" src="./images/tax_calc_img.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">Tax Withholing Estimator</h5>
+                <p class="card-body">Calculate your estimated tax for the year and the amount you need to withhold by the end of the year</p>
+            </a>
+        
+            <a href="https://codepen.io/nicholas-eveland/full/mdeoPNB" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img src="./images/pomodoro_clock.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">React Pomodoro Clock</h5>
+                <p class="card-body">Easy to use pomodoro timer to stay focused and mentally fresh</p>
+            </a>
+
+            <a href="https://reactcalchp.herokuapp.com" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img class="link-img" src="./images/calculator.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">React Calculator</h5>
+                <p class="card-body">Calculator built on Node.js and React</p>
+            </a>
+        
+            <a href="https://hoursplanner.herokuapp.com" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img src="./images/clock.png" style="width: auto; height: 20em; padding: 15px">
+                <h5 class="card-title">Hours Planner</h5>
+                <p class="card-body">Calculate the number of chargeable hours you need to work to hit your monthly goals. Perfect for tax accountants!</p>
+            </a>
+        
+            <a href="https://codepen.io/nicholas-eveland/full/VwvbaLq" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img src="./images/markdown_previewer.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">Markdown Previewer</h5>
+                <p class="card-body">Write in markdown and see an instant preview</p>
+            </a>
+            
+            <a href="https://codepen.io/nicholas-eveland/full/bGVomdm" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img src="./images/drum_machine.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">Drum Machine</h5>
+                <p class="card-body">Simple drum machine triggered by mouse or keyboard</p>
+            </a>
+        
+            <a href="https://codepen.io/nicholas-eveland/full/QWjERdJ" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img src="./images/random_quote.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">Random Quote Generator</h5>
+                <p class="card-body">Generate a random quote instantly</p>
+            </a>
                 
-                <div class="row">
-                    <% jobs.forEach(item => { %>
-                        <div class="col-sm-12 col-md-6 my-2">
-                            <div class="card shadow-sm">
-                                <div class="card-body">
-                                    <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding:15px;">
-                                    <h5 class="card-title"><%= item.title %></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><%= item.company %></h6>
-                                    <p class="card-text location-and-date text-muted"><%= item.location %>; <%= item.duration %></p>
-                                    <p class="card-text"><%= item.description %></p>
-                                    <% if(loggedIn) { %>    
-                                        <form  action="/resume/experience/<%= item._id %>/edit" method="GET">
-                                            <button class="btn btn-primary btn-block">
-                                                Edit
-                                            </button>
-                                        </form>
-                                        <form class="form" action="/resume/experience/<%= item._id %>?_method=DELETE" method="POST">
-                                            <button class="btn btn-danger btn-block">
-                                                Delete
-                                            </button>
-                                        </form>
-                                <% }; %>
-                                </div>
-                            </div>
-                        </div>
-                    <% }); %>
-                </div>
-            </div>
-            <!--Qualifications-->
-            <div class="qualifications-container">
-                <span class="anchor" id="qualifications"></span>
-                <h2 class="headingText">Qualifications</h2>
-                <% if(loggedIn) { %>
-                    <form action="/resume/qualifications/new" method="GET">
-                        <button class="btn btn-success">
-                            Add new qualification
-                        </button>
-                    </form>
-                <% }; %>
-                <div class="row">
-                    <% qualifications.forEach(item => { %>
-                    <div class="col-sm-12 col-md-6 my-2">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title"><%= item.title %></h5>
-                                <ul class="list-group list-group-flush">
-                                <% item.points.forEach(point => { %>
-                                    <li class="list-group-item" id="qualification"><%= point.point %></li>
-                                <% }); %>
-                                </ul>
-                                <% if(loggedIn) { %>    
-                                    <form  action="/resume/qualifications/<%= item._id %>/edit" method="GET">
+            <a href="https://codepen.io/nicholas-eveland/full/BajyJwQ" target="_blank" class="btn btn-transparent card shadow-sm portfolio portfolio-card">
+                <img class="link-img" src="./images/rgb-game.png" style="max-width: 100%; height: auto; padding-bottom: 15px">
+                <h5 class="card-title">RGB Color Game</h5>
+                <p class="card-body">Guess the color of any given RGB pattern</p>
+            </a>
+        </div>
+    </div> 
+</div>
+
+<div class="colored-container">
+    <div class="education-container container">
+        <!--Education-->
+        <span class="anchor" id="education"></span>
+        <h2 class="headingText">Education</h2>
+        <% if(loggedIn) { %>
+            <form action="/resume/education/new" method="GET">
+                <button class="btn btn-success">
+                    Add new education
+                </button>
+            </form>
+        <% }; %>
+
+        <div class="row">
+            <% education.forEach(item => { %>
+                <div class="col-sm-12 col-md-6 my-2">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding-bottom:15px;">
+                            <h5 class="card-title"><%= item.degree %></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><%= item.field %></h6>
+                            <p class="card-text"><%= item.misc %></p>
+                            <% if(loggedIn) { %>    
+                                    <form  action="/resume/education/<%= item._id %>/edit" method="GET">
                                         <button class="btn btn-primary btn-block">
                                             Edit
                                         </button>
                                     </form>
-                                    <form class="form" action="/resume/qualifications/<%= item._id %>?_method=DELETE" method="POST">
+                                    <form class="form" action="/resume/education/<%= item._id %>?_method=DELETE" method="POST">
                                         <button class="btn btn-danger btn-block">
                                             Delete
                                         </button>
                                     </form>
                             <% }; %>
-                            </div>
                         </div>
                     </div>
-                    <% }); %>    
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    </div>
+
+<!--Experience-->
+<div class="experience-container container">
+    <span class="anchor" id="experience"></span>
+    <h2 class="headingText">Experience</h2>
+    <% if(loggedIn) { %>
+        <form action="/resume/experience/new" method="GET">
+            <button class="btn btn-success">
+                Add new experience
+            </button>
+        </form>
+    <% }; %>
+    
+    <div class="row">
+        <% jobs.forEach(item => { %>
+            <div class="col-sm-12 col-md-6 my-2">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body">
+                        <img src="<%= item.image %>" class="card-img-top" style="max-width: 45%; height: auto; padding:15px;">
+                        <h5 class="card-title"><%= item.title %></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><%= item.company %></h6>
+                        <p class="card-text location-and-date text-muted"><%= item.location %>; <%= item.duration %></p>
+                        <p class="card-text"><%= item.description %></p>
+                        <% if(loggedIn) { %>    
+                            <form  action="/resume/experience/<%= item._id %>/edit" method="GET">
+                                <button class="btn btn-primary btn-block">
+                                    Edit
+                                </button>
+                            </form>
+                            <form class="form" action="/resume/experience/<%= item._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger btn-block">
+                                    Delete
+                                </button>
+                            </form>
+                    <% }; %>
+                    </div>
                 </div>
             </div>
-        </section>
+        <% }); %>
     </div>
-    </div>
+</div>
 
 <%- include('../partials/footer.ejs') %>

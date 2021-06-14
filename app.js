@@ -11,7 +11,6 @@ const express = require("express"),
       session = require('express-session'),
       authRoutes = require('./routes/index.js'),
       resumeRoutes = require('./routes/resume.js'),
-      portfolioRoutes = require('./routes/portfolio.js'),
       //enforce = require('express-sslify'),
       dotenv = require('dotenv').config();
 
@@ -46,7 +45,6 @@ mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: tr
 
 app.use(authRoutes);
 app.use('/resume', resumeRoutes);
-app.use('/portfolio', portfolioRoutes);
 
 app.get('*', (req, res) => {
     res.redirect('/resume');

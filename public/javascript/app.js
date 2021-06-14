@@ -1,27 +1,53 @@
 document.cookie = "samesite=strict";
 
+$(document).ready(() => {
+  $('.spinner-border').hide();
 
-// Slow scroll support for all browsers
 
-$('.nav-link, .navbar-brand').click(function() {
-  var sectionTo = $(this).attr('href');
-  $('html, body').animate({
-    scrollTop: $(sectionTo).offset().top
-  }, 400);
-});
+  // Slow scroll support for all browsers
+
+  $('.nav-link, .navbar-brand').click(function() {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top
+    }, 400);
+  });
 
   
   // Toggle active class on navbar links
-$(".nav-link").click(function() {
-  $(".nav-link").removeClass('active')
-  $(this).addClass('active');
-});
+  $(".nav-link").click(function() {
+    $(".nav-link").removeClass('active')
+    $(this).addClass('active');
+  });
+
+  $(window).scroll(() => {
+    const scrollPos = $(window).scrollTop();
+
+    const projects = $("#projects").offset().top - 200;
+    const education = $("#education").offset().top - 400;
+    const experience = $("#experience").offset().top - 400;
+    
+
+    if(scrollPos < projects) {
+      $('.active').removeClass('active');
+      $('#skillsBtn').addClass('active');
+    } else if(scrollPos > projects && scrollPos < education) {
+      $('.active').removeClass('active');
+      $('#portfolio').addClass('active');
+    } else if(scrollPos > education && scrollPos < experience) {
+      $('.active').removeClass('active');
+      $('#educationBtn').addClass('active')
+    } else {
+      $('.active').removeClass('active');
+      $('#experienceBtn').addClass('active')
+    }
+  })
 
   
-// Toggle edit mode on index page
-$('#edit-index').click(() => {
-  $('#edit-index').toggleClass('active');
-});
+  // Toggle edit mode on index page
+  $('#edit-index').click(() => {
+    $('#edit-index').toggleClass('active');
+  });
 
 
 // Add Qualification button actions
@@ -43,18 +69,5 @@ $('#qual-list').on('click', '.remove-qual', (e) => {
 });
 
 
-const portfolioCard = document.querySelectorAll(".portfolio");
 
-function hoverEffect(el) {
-    for(let i = 0; i < el.length; i++) {
-        el[i].addEventListener("mouseover", function() {
-            el[i].classList.add("hover-effect-card")
-        })
-      
-        el[i].addEventListener("mouseout", function() {
-            el[i].classList.remove("hover-effect-card")
-        })
-      }
-}
-
-hoverEffect(portfolioCard);
+});

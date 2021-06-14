@@ -14,7 +14,3 @@ app.use(methodOverride("_method"));
 
 // CONNECT TO MONGODB
 mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: true}).catch(error => handleError(error));
-
-
-// Register Form
-

@@ -24,6 +24,25 @@ body {
  #upper-container {
     max-width: 97.9%;
  }
+
+ .about-container {
+    overflow: hidden;
+ }
+
+ .colored-container {
+    background-color: #cce5ff;
+ }
+
+ .other-container {
+   margin-bottom: 60px;
+ }
+
+#loadingSpinner {
+   z-index: 10000;
+   width: 3rem; 
+   height: 3rem;
+}
+
  
  #title {
     padding-left: 0;
@@ -110,7 +129,7 @@ body {
 
  @media screen and (min-width: 1101px) {
    .famSocial {
-      font-size: 3em;
+      font-size: 2.25em;
    }
  }
  
@@ -131,7 +150,7 @@ body {
    width: 100%;
    height: 7rem; 
    text-align: center;
-   padding-top: 10px;
+   padding-top: 15px;
    padding-bottom: 5px;
 }
 
@@ -148,22 +167,25 @@ body {
 #copyright {
    display: block;
    width: 100%;
-   margin: 1rem 0 1rem 0;
-   padding-bottom: 1rem;
+   margin-top: 2em;
 }
  
  /** Project Portfolio **/
  
-  .portfolio-card {
-     padding-top: 0;
-     padding-left: 0;
-     padding-right: 0;
-  }
- 
-  .hover-effect-card {
-    transform: scale(1.02);
-  }
+.portfolio-card {
+   padding-top: 0;
+   padding-left: 0;
+   padding-right: 0;
+   text-align: center;
+   transition: all 200ms;
+   margin-top: 2em;
+}
 
- .portolio-desc {
-     color: rgba(0,0,0,.5);
-  }
+.portfolio-card:hover {
+   transform: scale(1.01);
+}
+
+
+.portolio-desc {
+   color: rgba(0,0,0,.5);
+}
