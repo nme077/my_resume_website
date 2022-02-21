@@ -240,16 +240,6 @@ body {
    border-radius: 0 0 6px 6px;
  }
 
- .highlight-monitor {
-   width: calc(14.09px*30);
-   height: calc(9.68px*30);
- }
-
- .highlight-base {
-   height: calc(0.64px*30);
-   width: calc(17.5px*30);
- }
-
 .link-img {
    max-width: 100%;
    height: 100%;
