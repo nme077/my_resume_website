@@ -213,8 +213,8 @@ body {
  }
  
  .monitor {
-   width: calc(14.09px*20);
-   height: calc(9.68px*20);
+   width: calc(14.09px*20);/** See also .highlight-monitor **/
+   height: calc(9.68px*20);/** See also .highlight-monitor **/
    background-color: black;
    border-radius: 8px 8px 0 0;
    border: 3px solid #707070;
@@ -232,12 +232,22 @@ body {
  }
  
  .base {
-   height: calc(0.64px*20);
-   width: calc(17.5px*20);
+   height: calc(0.64px*20);/** See also .highlight-base **/
+   width: calc(17.5px*20);/** See also .highlight-base **/
    background-color: #707070;
    margin: 0 auto;
    display: block;
    border-radius: 0 0 6px 6px;
+ }
+
+ .highlight-monitor {
+   width: calc(14.09px*30);
+   height: calc(9.68px*30);
+ }
+
+ .highlight-base {
+   height: calc(0.64px*30);
+   width: calc(17.5px*30);
  }
 
 .link-img {
