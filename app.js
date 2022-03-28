@@ -44,10 +44,10 @@ mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: tr
 
 
 app.use(authRoutes);
-app.use('/resume', resumeRoutes);
+app.use('/', resumeRoutes);
 
 app.get('*', (req, res) => {
-    res.redirect('/resume');
+    res.redirect('/');
 });
 
 var port = process.env.PORT || 3000;

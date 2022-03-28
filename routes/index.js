@@ -23,7 +23,7 @@ router.post('/register', (req, res) => {
         } else {
             passport.authenticate('local')(req, res, () => {
                 console.log('New User Added');
-                res.redirect('/resume');
+                res.redirect('/');
             })
         }
     })
@@ -36,7 +36,7 @@ router.get('/login', (req, res) => {
 });
 // Login logic
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/resume',
+    successRedirect: '/',
     failureRedirect: '/login'
 }), (req, res) => {
 });

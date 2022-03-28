@@ -27,13 +27,13 @@
 
         <!--NavBar-->
         <nav class="navbar sticky-top navbar-expand-md navbar-light shadow">
-            <a class="navbar-brand" style="color: #005c99;" href="/resume">Nicholas</a>
+            <a class="navbar-brand" style="color: #005c99;" href="/">Nicholas</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto" id="nav-links">
-                    <% if(path === '/resume') { %>
+                    <% if(path === '/') { %>
                         <li class="nav-item">
                             <a class="nav-link resume-onscreen-link active" href="#qualifications" id="skillsBtn">Skills</a>
                         </li>
@@ -48,7 +48,7 @@
                         </li>
                     <% } else { %>
                         <li class="nav-item">
-                            <a class="nav-link" id="resume-link" href="/resume">Resum&eacute;</a>
+                            <a class="nav-link" id="resume-link" href="/">Resum&eacute;</a>
                         </li>
                     <% };%>
                 </ul>

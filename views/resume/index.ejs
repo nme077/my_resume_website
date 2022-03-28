@@ -7,7 +7,7 @@
            <hr class="style-one">
            <h5 class="card-text font-weight-normal text-center">Full-Stack Javascript Developer</h5>
            <div class="my-4">
-               <a href="/resume/download" class="btn btn-secondary" id="download-pdf-btn">Download Resum&eacute;</a>
+               <a href="/download" class="btn btn-secondary" id="download-pdf-btn">Download Resum&eacute;</a>
            </div>
            <a href="http://www.linkedin.com/in/nicholas-eveland-7988279a" class="social-link" target="_blank">
             <i class="fab fa-linkedin-in"></i>
@@ -72,7 +72,7 @@
                 <div class="base"></div>
             </div>
             <h5 class="mt-2 portfolio-title font-weight-bold">Cards</h5>
-            <p class="card-title portolio-desc">Greeting card creator built on Node.js</p>
+            <p class="card-title portolio-desc">Greeting card creator. Full-stack app built using Javascript, Node.js, Express, Passport.js, and MongoDB.</p>
             <a href="https://cardapp77.herokuapp.com/" target="_blank">View project <i class="fas fa-chevron-right"></i></a>
         </div>
 
@@ -87,7 +87,7 @@
                 <div class="base"></div>
             </div>
             <h5 class="mt-2 portfolio-title font-weight-bold">Burger Barn</h5>
-            <p class="card-title portolio-desc">The unofficial Burger Barn website built with the MERN stack.</p>
+            <p class="card-title portolio-desc">The unofficial Burger Barn website. Full-stack app built using the MERN stack (MongoDB, Express, React, Node).</p>
             <a href="https://burger-barn-1827.herokuapp.com/" target="_blank">View project <i class="fas fa-chevron-right"></i></a>
         </div>
 
@@ -102,7 +102,7 @@
                 <div class="base"></div>
             </div>
             <h5 class="mt-2 portfolio-title font-weight-bold">FamSocial</h5>
-            <p class="card-title portolio-desc">The social network designed for your Fam!</p>
+            <p class="card-title portolio-desc">The social network designed for your Fam! Full-stack app built using Javascript, Node.js, Express, Passport.js, MongoDB, and Bootstrap.</p>
             <a href="https://famsocial.herokuapp.com/" target="_blank">View project <i class="fas fa-chevron-right"></i></a>
         </div>
 
@@ -235,7 +235,7 @@
         <span class="anchor" id="education"></span>
         <h2 class="headingText">Education</h2>
         <% if(loggedIn) { %>
-            <form action="/resume/education/new" method="GET">
+            <form action="/education/new" method="GET">
                 <button class="btn btn-success">
                     Add new education
                 </button>
@@ -252,12 +252,12 @@
                             <h6 class="card-subtitle mb-2 text-muted"><%= item.field %></h6>
                             <p class="card-text"><%= item.misc %></p>
                             <% if(loggedIn) { %>    
-                                    <form  action="/resume/education/<%= item._id %>/edit" method="GET">
+                                    <form  action="/education/<%= item._id %>/edit" method="GET">
                                         <button class="btn btn-primary btn-block">
                                             Edit
                                         </button>
                                     </form>
-                                    <form class="form" action="/resume/education/<%= item._id %>?_method=DELETE" method="POST">
+                                    <form class="form" action="/education/<%= item._id %>?_method=DELETE" method="POST">
                                         <button class="btn btn-danger btn-block">
                                             Delete
                                         </button>
@@ -276,7 +276,7 @@
     <span class="anchor" id="experience"></span>
     <h2 class="headingText">Experience</h2>
     <% if(loggedIn) { %>
-        <form action="/resume/experience/new" method="GET">
+        <form action=/experience/new" method="GET">
             <button class="btn btn-success">
                 Add new experience
             </button>
@@ -294,12 +294,12 @@
                         <p class="card-text location-and-date text-muted"><%= item.location %>; <%= item.duration %></p>
                         <p class="card-text text-left"><%= item.description %></p>
                         <% if(loggedIn) { %>    
-                            <form  action="/resume/experience/<%= item._id %>/edit" method="GET">
+                            <form  action="/experience/<%= item._id %>/edit" method="GET">
                                 <button class="btn btn-primary btn-block">
                                     Edit
                                 </button>
                             </form>
-                            <form class="form" action="/resume/experience/<%= item._id %>?_method=DELETE" method="POST">
+                            <form class="form" action="/experience/<%= item._id %>?_method=DELETE" method="POST">
                                 <button class="btn btn-danger btn-block">
                                     Delete
                                 </button>

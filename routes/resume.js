@@ -51,7 +51,7 @@ router.post('/education',middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     });
 });
@@ -73,7 +73,7 @@ router.put('/education/:id', middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     });
 });
@@ -84,7 +84,7 @@ router.delete('/education/:id',middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     })
 });
@@ -101,7 +101,7 @@ router.post('/experience',middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     });
 });
@@ -123,7 +123,7 @@ router.put('/experience/:id', middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     });
 });
@@ -134,7 +134,7 @@ router.delete('/experience/:id', middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     })
 });
@@ -166,7 +166,7 @@ router.post('/qualifications',middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     });
 });
@@ -202,7 +202,7 @@ router.put('/qualifications/:id', middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     });
 });
@@ -213,7 +213,7 @@ router.delete('/qualifications/:id', middleware.loggedIn, (req, res) => {
         if(err) {
             res.redirect('back');
         } else {
-            res.redirect('/resume');
+            res.redirect('/');
         }
     })
 });

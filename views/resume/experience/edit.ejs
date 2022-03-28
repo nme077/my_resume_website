@@ -5,7 +5,7 @@
 
             <h1>Edit Experience</h1>
 
-            <form action="/resume/experience/<%= experience._id %>?_method=PUT" method="POST">
+            <form action="/experience/<%= experience._id %>?_method=PUT" method="POST">
                 <div class="form-group">
                     <label for="image-input">Image</label>
                     <input type="text" class="form-control" id="image-input" name="job[image]" value="<%= experience.image %>">
