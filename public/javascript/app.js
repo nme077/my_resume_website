@@ -68,6 +68,14 @@ $('#qual-list').on('click', '.remove-qual', (e) => {
   e.target.parentNode.remove();
 });
 
+const options = {
+  strings: ['Full-stack web developer', 'NodeJS backend developer', 'Frontend web developer'],
+  typeSpeed: 40,
+  backSpeed: 20,
+  backDelay: 1000,
+  loop: true
+};
 
+const typed = new Typed('.typed-title', options);
 
 });
